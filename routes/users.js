@@ -7,7 +7,7 @@ const bodyParser = require('body-parser').json();
 const User = require('../models/user');
 
 /* ========== GET/READ ALL ITEM ========== */
-router.get('/users', (req, res, next) => {
+router.get('/users', bodyParser, (req, res, next) => {
   User.find()
     .then(results => {
       res.json(results);
