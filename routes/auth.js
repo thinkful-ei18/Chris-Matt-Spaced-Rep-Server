@@ -19,7 +19,7 @@ function createAuthToken(user) {
   });
 }
 
-router.post('/login', bodyParser, localAuth, (req, res) => {
+router.post('/auth/login', bodyParser, localAuth, (req, res) => {
   const authToken = createAuthToken(req.user);
   console.log(authToken);
   return res.json({authToken});
@@ -27,7 +27,7 @@ router.post('/login', bodyParser, localAuth, (req, res) => {
 
 const jwtAuth = passport.authenticate('jwt', options);
 
-router.post('/refresh', jwtAuth, (req, res) => {
+router.post('/auth/refresh', jwtAuth, (req, res) => {
   const authToken = createAuthToken(req.user);
   res.json({authToken});
 });
