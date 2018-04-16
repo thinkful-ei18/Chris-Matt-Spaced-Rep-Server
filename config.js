@@ -1,18 +1,8 @@
 'use strict';
 
-module.exports = {
-  PORT: process.env.PORT || 8080,
-  CLIENT_ORIGIN: process.env.CLIENT_ORIGIN || 'http://localhost:3000',
-  DATABASE_URL:
-        process.env.DATABASE_URL || 'mongodb://webuser:webuser@ds013495.mlab.com:13495/spaced-rep',
-  TEST_DATABASE_URL:
-        process.env.TEST_DATABASE_URL ||
-        'mongodb://localhost/thinkful-backend-test',
-  JWT_SECRET: process.env.JWT_SECRET,
-  JWT_EXPIRY: process.env.JWT_EXPIRY || '7d'
-  // DATABASE_URL:
-  //     process.env.DATABASE_URL || 'postgres://localhost/thinkful-backend',
-  // TEST_DATABASE_URL:
-  //     process.env.TEST_DATABASE_URL ||
-  //     'postgres://localhost/thinkful-backend-test'
-};
+exports.PORT = process.env.PORT || 8080;
+exports.CLIENT_ORIGIN = process.env.CLIENT_ORIGIN || 'http://localhost:3000';
+exports.DATABASE_URL = process.env.DATABASE_URL || 'mongodb://webuser:webuser@ds013495.mlab.com:13495/spaced-rep';
+exports.TEST_DATABASE_URL = process.env.TEST_DATABASE_URL || 'mongodb://localhost/thinkful-backend-test';
+exports.JWT_SECRET = process.env.JWT_SECRET;
+exports.JWT_EXPIRY = process.env.JWT_EXPIRY || '7d';
