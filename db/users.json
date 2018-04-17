@@ -5,12 +5,54 @@
     "password": "password123",
     "email": "test@test.com",
     "questions": [
-        "5ad61ceb1aad04bea1adb4b5",
-        "5ad61ceb1aad04bea1adb4b6",
-        "5ad61ceb1aad04bea1adb4b7",
-        "5ad61ceb1aad04bea1adb4b8",
-        "5ad61ceb1aad04bea1adb4b9",
-        "5ad61ceb1aad04bea1adb4ba"
+      {
+        "spanish": "gato",
+        "english": "cat",
+        "id": "5ad61ceb1aad04bea1adb4b5",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
+        "head": true
+      },
+      {
+        "spanish": "perro",
+        "english": "dog",
+        "id": "5ad61ceb1aad04bea1adb4b6",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
+        "head": false
+      },
+      {
+        "spanish": "tortuga",
+        "english": "turtle",
+        "id": "5ad61ceb1aad04bea1adb4b7",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
+        "head": false
+      },
+      {
+        "spanish": "raton",
+        "english": "mouse",
+        "id": "5ad61ceb1aad04bea1adb4b8",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
+        "head": false
+      },
+      {
+        "spanish": "cerdo",
+        "english": "pig",
+        "id": "5ad61ceb1aad04bea1adb4b9",
+        "mValue": 1,
+        "nextQuestion": null,
+        "head": false
+      },
+      {
+        "spanish": "pajaro",
+        "english": "bird",
+        "id": "5ad61ceb1aad04bea1adb4ba",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
+        "head": false
+      }
     ]
   },
   {
@@ -19,12 +61,54 @@
     "password": "password123",
     "email": "tester@test.com",
     "questions": [
-      "5ad61ceb1aad04bea1adb4b5",
-      "5ad61ceb1aad04bea1adb4b6",
-      "5ad61ceb1aad04bea1adb4b7",
-      "5ad61ceb1aad04bea1adb4b8",
-      "5ad61ceb1aad04bea1adb4b9",
-      "5ad61ceb1aad04bea1adb4ba"
+      {
+        "spanish": "gato",
+        "english": "cat",
+        "id": "5ad61ceb1aad04bea1adb4b5",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
+        "head": true
+      },
+      {
+        "spanish": "perro",
+        "english": "dog",
+        "id": "5ad61ceb1aad04bea1adb4b6",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
+        "head": false
+      },
+      {
+        "spanish": "tortuga",
+        "english": "turtle",
+        "id": "5ad61ceb1aad04bea1adb4b7",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
+        "head": false
+      },
+      {
+        "spanish": "raton",
+        "english": "mouse",
+        "id": "5ad61ceb1aad04bea1adb4b8",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
+        "head": false
+      },
+      {
+        "spanish": "cerdo",
+        "english": "pig",
+        "id": "5ad61ceb1aad04bea1adb4b9",
+        "mValue": 1,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4ba",
+        "head": false
+      },
+      {
+        "spanish": "pajaro",
+        "english": "bird",
+        "id": "5ad61ceb1aad04bea1adb4ba",
+        "mValue": 1,
+        "nextQuestion": null,
+        "head": false
+      }
     ]
   }
 ]

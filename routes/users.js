@@ -105,34 +105,149 @@ router.post('/users', bodyParser, (req, res, next) => {
     });
   }
 
-  let questions;
+  let questions = [
+    {
+      'spanish': 'gato',
+      'english': 'cat',
+      'id': '5ad61ceb1aad04bea1adb4b5',
+      'mValue': 1,
+      'nextQuestion': '5ad61ceb1aad04bea1adb4b6',
+      'head': true
+    },
+    {
+      'spanish': 'perro',
+      'english': 'dog',
+      'id': '5ad61ceb1aad04bea1adb4b6',
+      'mValue': 1,
+      'nextQuestion': '5ad61ceb1aad04bea1adb4b7',
+      'head': false
+    },
+    {
+      'spanish': 'tortuga',
+      'english': 'turtle',
+      'id': '5ad61ceb1aad04bea1adb4b7',
+      'mValue': 1,
+      'nextQuestion': '5ad61ceb1aad04bea1adb4b8',
+      'head': false
+    },
+    {
+      'spanish': 'raton',
+      'english': 'mouse',
+      'id': '5ad61ceb1aad04bea1adb4b8',
+      'mValue': 1,
+      'nextQuestion': '5ad61ceb1aad04bea1adb4b9',
+      'head': false
+    },
+    {
+      'spanish': 'cerdo',
+      'english': 'pig',
+      'id': '5ad61ceb1aad04bea1adb4b9',
+      'mValue': 1,
+      'nextQuestion': '5ad61ceb1aad04bea1adb4ba',
+      'head': false
+    },
+    {
+      'spanish': 'pajaro',
+      'english': 'bird',
+      'id': '5ad61ceb1aad04bea1adb4ba',
+      'mValue': 1,
+      'nextQuestion': null,
+      'head': false
+    }
+  ];
 
-  return Question.find()
-    .then(results => {
-      questions = results;
+  return User.hashPassword(password)
+    .then(digest => {
+      const newUser = {
+        username,
+        password: digest,
+        fullname,
+        email,
+        questions
+      };
+      return User.create(newUser);
     })
-    .then(() => {
-      User.hashPassword(password)
-        .then(digest => {
-          const newUser = {
-            username,
-            password: digest,
-            fullname,
-            email,
-            questions
-          };
-          return User.create(newUser);
-        })
-        .then(result => {
-          return res.location(`${req.originalUrl}/${result.id}`).status(201).json(result);
-        })
-        .catch(err => {
-          if (err.code === 11000) {
-            err = new Error('The username already exists');
-          }
-          next(err);
-        });
+    .then(result => {
+      return res.location(`${req.originalUrl}/${result.id}`).status(201).json(result);
+    })
+    .catch(err => {
+      if (err.code === 11000) {
+        err = new Error('The username already exists');
+      }
+      next(err);
     });
+});
+
+/* ========== UPDATE AN ITEM ========== */
+router.put('/users/:id', bodyParser, (req, res, next) => {
+  const {id} = req.params;
+  const {english} = req.body;
+
+  let updateItem;
+
+  User.findById({_id: id})
+    .then(results => {
+      let questions = results.questions;
+      let currNode;
+      let nextQuestionID;
+      for (let i = 0; i < questions.length; i++) {
+        if (questions[i].head) {
+          currNode = questions[i];
+          currNode.head = false;
+          nextQuestionID = currNode.nextQuestion;
+        }
+      }
+      for (let i = 0; i < questions.length; i++) {
+        if (questions[i].id === nextQuestionID) {
+          questions[i].head = true;
+        }
+      }
+      let nextNode = currNode;
+      if (english === currNode.english) {
+        currNode.mValue *= 2;
+        if (currNode.mValue > questions.length) {
+          currNode.mValue = questions.length;
+        }
+        for (let i = 0; i < currNode.mValue; i++) {
+          nextNode = nextNode.nextQuestion;
+          for (let j = 0; j < questions.length; j++) {
+            if (questions[j].id === nextNode) {
+              nextNode = questions[j];
+            }
+          }
+        }
+        currNode.nextQuestion = nextNode.nextQuestion;
+        nextNode.nextQuestion = currNode.id;
+        updateItem = questions;
+      } else {
+        currNode.mValue = 1;
+        for (let i = 0; i < currNode.mValue; i++) {
+          nextNode = nextNode.nextQuestion;
+          for (let j = 0; j < questions.length; j++) {
+            if (questions[j].id === nextNode) {
+              nextNode = questions[j];
+            }
+          }
+        }
+        currNode.nextQuestion = nextNode.nextQuestion;
+        nextNode.nextQuestion = currNode.id;
+        updateItem = questions;
+      }
+      return results;
+    })
+    .then(results => {
+      User.findByIdAndUpdate({_id: id}, {
+        questions: updateItem,
+        fullname: results.fullname,
+        username: results.username,
+        email: results.email,
+        id: results.id
+      })
+        .then(result => {
+          res.json(result);
+        });
+    })
+    .catch(next);
 });
 
 module.exports = router;

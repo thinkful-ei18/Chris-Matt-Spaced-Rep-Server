@@ -1,3 +1,5 @@
+'use strict';
+
 const _Node = require('./node');
 
 // _length: assigned number of nodes in list
