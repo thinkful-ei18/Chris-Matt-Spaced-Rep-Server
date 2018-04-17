@@ -9,8 +9,7 @@ const QuestionSchema = new mongoose.Schema({
   },
   english: {
     type: String,
-    required: true,
-    unique: true
+    required: true
   }
 });
 

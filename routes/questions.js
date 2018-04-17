@@ -57,7 +57,6 @@ router.get('/questions', (req, res, next) => {
 /* ========== POST A QUESTION ========== */
 router.post('/questions', bodyParser, (req, res, next) => {
   const {spanish, english} = req.body;
-  console.log(spanish, english);
 
   const requiredFields = ['spanish', 'english'];
   const hasFields = requiredFields.every(field => {
@@ -103,18 +102,36 @@ router.post('/questions', bodyParser, (req, res, next) => {
   const newQuestion = {
     spanish,
     english
-  }
+  };
 
   return Question.create(newQuestion)
-  .then(result => {
-    return res.location(`${req.originalUrl}/${result.id}`).status(201).json(result);
-  })
-  .catch(err => {
-    if (err.code === 11000) {
-      err = new Error('The spanish word already exists')
-    }
-    next(err);
-  });
+    .then(result => {
+      return res.location(`${req.originalUrl}/${result.id}`).status(201).json(result);
+    })
+    .catch(err => {
+      if (err.code === 11000) {
+        err = new Error('The spanish word already exists');
+      }
+      next(err);
+    });
+});
+
+/* ========== UPDATE A QUESTION ========== */
+router.put('/questions/:id', bodyParser, (req, res, next) => {
+  const { id } = req.params;
+  const { spanish, english, nextQuestion, head, m } = req.body;
+
+  const updateItem = { spanish, english, nextQuestion, head, m };
+
+  Question.findByIdAndUpdate(id, updateItem)
+    .then(result => {
+      if (result) {
+        res.json(result);
+      } else {
+        next();
+      }
+    })
+    .catch(next);
 });
 
 module.exports = router;

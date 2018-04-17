@@ -3,7 +3,15 @@
     "fullname": "Chris Yang",
     "username": "cyang",
     "password": "password123",
-    "email": "test@test.com"
+    "email": "test@test.com",
+    "questions": [
+      {
+        "spanish": "gato",
+        "english" : "cat",
+        "m": 1,
+        "nextQuestion": "123456"
+      }
+    ]
   },
   {
     "fullname": "Billy Bob",

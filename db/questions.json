@@ -1,0 +1,26 @@
+[
+  {
+    "spanish": "gato",
+    "english": "cat"
+  },
+  {
+      "spanish": "perro",
+      "english": "dog"
+  },
+  {
+      "spanish": "tortuga",
+      "english": "turtle"
+  },
+  {
+      "spanish": "raton",
+      "english": "mouse"
+  },
+  {
+      "spanish": "cerdo",
+      "english": "pig"
+  },
+  {
+      "spanish": "pajaro",
+      "english": "bird"
+  }
+]
