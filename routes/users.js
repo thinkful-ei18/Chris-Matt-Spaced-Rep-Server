@@ -18,6 +18,18 @@ router.get('/users', bodyParser, (req, res, next) => {
     });
 });
 
+/* ========== GET/READ AN ITEM BY ID ========== */
+router.get('/users/:id', bodyParser, (req, res, next) => {
+  const {id} = req.params;
+  User.findById({_id: id})
+    .then(results => {
+      res.json(results);
+    })
+    .catch(err => {
+      next(err);
+    });
+});
+
 /* ========== POST/CREATE AN ITEM ========== */
 router.post('/users', bodyParser, (req, res, next) => {
   const {fullname, username, password, email} = req.body;
