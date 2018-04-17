@@ -17,15 +17,15 @@ mongoose.connect(DATABASE_URL)
       });
   })
   .then(() => {
-    return User.insertMany(seedUsers)
-      .then(results => {
-        console.info(`Inserted ${results.length} Users`);
-      });
-  })
-  .then(() => {
     return Question.insertMany(seedQuestions)
       .then(results => {
         console.info(`Inserted ${results.length} Questions`);
+      });
+  })
+  .then(() => {
+    return User.insertMany(seedUsers)
+      .then(results => {
+        console.info(`Inserted ${results.length} Users`);
       });
   })
   .then(() => {

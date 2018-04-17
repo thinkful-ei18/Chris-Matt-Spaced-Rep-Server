@@ -5,18 +5,26 @@
     "password": "password123",
     "email": "test@test.com",
     "questions": [
-      {
-        "spanish": "gato",
-        "english" : "cat",
-        "m": 1,
-        "nextQuestion": "123456"
-      }
+        "5ad61ceb1aad04bea1adb4b5",
+        "5ad61ceb1aad04bea1adb4b6",
+        "5ad61ceb1aad04bea1adb4b7",
+        "5ad61ceb1aad04bea1adb4b8",
+        "5ad61ceb1aad04bea1adb4b9",
+        "5ad61ceb1aad04bea1adb4ba"
     ]
   },
   {
     "fullname": "Billy Bob",
     "username": "bbob",
     "password": "password123",
-    "email": "tester@test.com"
+    "email": "tester@test.com",
+    "questions": [
+      "5ad61ceb1aad04bea1adb4b5",
+      "5ad61ceb1aad04bea1adb4b6",
+      "5ad61ceb1aad04bea1adb4b7",
+      "5ad61ceb1aad04bea1adb4b8",
+      "5ad61ceb1aad04bea1adb4b9",
+      "5ad61ceb1aad04bea1adb4ba"
+    ]
   }
 ]

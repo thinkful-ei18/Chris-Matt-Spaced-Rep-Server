@@ -22,7 +22,7 @@ const UserSchema = new mongoose.Schema({
     required: true
   },
   questions: {
-    type: mongoose.Schema.Types.ObjectId,
+    type: Array,
     ref: 'Question'
   }
 });

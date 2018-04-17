@@ -5,6 +5,7 @@ const router = express.Router();
 const bodyParser = require('body-parser').json();
 
 const User = require('../models/user');
+const Question = require('../models/question');
 
 /* ========== GET/READ ALL ITEM ========== */
 router.get('/users', bodyParser, (req, res, next) => {
@@ -104,24 +105,33 @@ router.post('/users', bodyParser, (req, res, next) => {
     });
   }
 
-  return User.hashPassword(password)
-    .then(digest => {
-      const newUser = {
-        username,
-        password: digest,
-        fullname,
-        email
-      };
-      return User.create(newUser);
+  let questions;
+
+  return Question.find()
+    .then(results => {
+      questions = results;
     })
-    .then(result => {
-      return res.location(`${req.originalUrl}/${result.id}`).status(201).json(result);
-    })
-    .catch(err => {
-      if (err.code === 11000) {
-        err = new Error('The username already exists');
-      }
-      next(err);
+    .then(() => {
+      User.hashPassword(password)
+        .then(digest => {
+          const newUser = {
+            username,
+            password: digest,
+            fullname,
+            email,
+            questions
+          };
+          return User.create(newUser);
+        })
+        .then(result => {
+          return res.location(`${req.originalUrl}/${result.id}`).status(201).json(result);
+        })
+        .catch(err => {
+          if (err.code === 11000) {
+            err = new Error('The username already exists');
+          }
+          next(err);
+        });
     });
 });
 

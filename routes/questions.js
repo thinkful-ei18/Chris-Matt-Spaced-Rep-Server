@@ -42,17 +42,17 @@ router.get('/questions', (req, res, next) => {
     });
 });
 
-// /* ========== GET/READ ONE QUESTION ========== */
-// router.get('/questions', (req, res, next) => {
-//   Question.findOne()
-//     .then(results => {
-//       // console.log('TEST')
-//       res.json(results);
-//     })
-//     .catch(err => {
-//       next(err);
-//     });
-// });
+/* ========== GET/READ ONE QUESTION ========== */
+router.get('/questions/:id', (req, res, next) => {
+  const {id} = req.params;
+  Question.findOne({_id: id})
+    .then(results => {
+      res.json(results);
+    })
+    .catch(err => {
+      next(err);
+    });
+});
 
 /* ========== POST A QUESTION ========== */
 router.post('/questions', bodyParser, (req, res, next) => {
