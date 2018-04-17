@@ -6,6 +6,30 @@ const bodyParser = require('body-parser').json();
 
 const Question = require('../models/question');
 
+const _Node = require('../linked-list/node');
+const LinkedList = require('../linked-list/linked-list');
+
+/* ========== GENERATE TEST DATA FOR LINKED-LIST ========== */
+function seedData() {
+  let SLL = new LinkedList;
+  SLL.insertLast('gato', 'cat');
+  SLL.insertLast('perro', 'dog');
+  SLL.insertLast('caballo', 'horse');
+  SLL.insertLast('raton', 'mouse');
+  SLL.insertLast('cerdo', 'pig');
+  
+  SLL.insertLast('pajaro', 'bird');
+  SLL.insertLast('ballena', 'whale');
+  SLL.insertLast('cabra', 'goat');
+  SLL.insertLast('elefante', 'elephant');
+  SLL.insertLast('yo quiero Taco Bell', 'I want Taco Bell');
+  
+  
+
+  console.log(JSON.stringify(SLL));
+}
+seedData();
+
 /* ========== GET/READ ALL QUESTIONS ========== */
 router.get('/questions', (req, res, next) => {
   Question.find()
