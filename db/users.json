@@ -102,7 +102,7 @@
         "english": "pig",
         "id": "5ad61ceb1aad04bea1adb4b9",
         "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4ba",
+        "nextQuestion": null,
         "head": false
       },
       {
@@ -110,7 +110,7 @@
         "english": "bird",
         "id": "5ad61ceb1aad04bea1adb4ba",
         "mValue": 1,
-        "nextQuestion": null,
+        "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
         "head": false
       }
     ]
