@@ -2,49 +2,31 @@
   {
     "spanish": "gato",
     "english": "cat",
-    "_id": "5ad61ceb1aad04bea1adb4b5",
-    "mValue": 1,
-    "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
-    "head": true
+    "id": "5ad61ceb1aad04bea1adb4b5"
   },
   {
     "spanish": "perro",
     "english": "dog",
-    "_id": "5ad61ceb1aad04bea1adb4b6",
-    "mValue": 1,
-    "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
-    "head": false
+    "id": "5ad61ceb1aad04bea1adb4b6"
   },
   {
     "spanish": "tortuga",
     "english": "turtle",
-    "_id": "5ad61ceb1aad04bea1adb4b7",
-    "mValue": 1,
-    "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
-    "head": false
+    "id": "5ad61ceb1aad04bea1adb4b7"
   },
   {
     "spanish": "raton",
     "english": "mouse",
-    "_id": "5ad61ceb1aad04bea1adb4b8",
-    "mValue": 1,
-    "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
-    "head": false
+    "id": "5ad61ceb1aad04bea1adb4b8"
   },
   {
     "spanish": "cerdo",
     "english": "pig",
-    "_id": "5ad61ceb1aad04bea1adb4b9",
-    "mValue": 1,
-    "nextQuestion": "5ad61ceb1aad04bea1adb4ba",
-    "head": false
+    "id": "5ad61ceb1aad04bea1adb4b9"
   },
   {
     "spanish": "pajaro",
     "english": "bird",
-    "_id": "5ad61ceb1aad04bea1adb4ba",
-    "mValue": 1,
-    "nextQuestion": "nothing",
-    "head": false
+    "id": "5ad61ceb1aad04bea1adb4ba"
   }
 ]

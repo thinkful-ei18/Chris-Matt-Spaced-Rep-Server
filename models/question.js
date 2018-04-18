@@ -10,16 +10,6 @@ const QuestionSchema = new mongoose.Schema({
   english: {
     type: String,
     required: true
-  },
-  mValue: {
-    type: Number,
-    default: 0
-  },
-  nextQuestion: {
-    type: String,
-  },
-  head: {
-    type: Boolean
   }
 });
 
