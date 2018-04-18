@@ -32,7 +32,7 @@ router.get('/users/:id', bodyParser, (req, res, next) => {
 
 /* ========== POST/CREATE AN ITEM ========== */
 router.post('/users', bodyParser, (req, res, next) => {
-  const {fullname, username, password, email} = req.body;
+  const {fullname, username, password, email, correct, incorrect} = req.body;
 
   const requiredFields = ['username', 'password', 'email', 'fullname'];
   const hasFields = requiredFields.every(field => {
@@ -175,7 +175,9 @@ router.post('/users', bodyParser, (req, res, next) => {
         password: digest,
         fullname,
         email,
-        questions
+        correct,
+        incorrect,
+        questions,
       };
       return User.create(newUser);
     })
@@ -193,12 +195,16 @@ router.post('/users', bodyParser, (req, res, next) => {
 /* ========== UPDATE AN ITEM ========== */
 router.put('/users/:id', bodyParser, (req, res, next) => {
   const {id} = req.params;
-  const {english} = req.body;
+  const {english, result} = req.body;
 
   let updateItem;
-
   User.findById({_id: id})
     .then(results => {
+      if (result === 1) {
+        results.correct++;
+      } else {
+        results.incorrect++;
+      }
       let questions = results.questions;
       let currNode;
       let nextQuestionID;
@@ -253,7 +259,9 @@ router.put('/users/:id', bodyParser, (req, res, next) => {
         fullname: results.fullname,
         username: results.username,
         email: results.email,
-        id: results.id
+        id: results.id,
+        correct: results.correct,
+        incorrect: results.incorrect
       })
         .then(result => {
           res.json(result);

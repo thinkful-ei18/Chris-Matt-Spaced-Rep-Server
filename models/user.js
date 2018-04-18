@@ -21,6 +21,14 @@ const UserSchema = new mongoose.Schema({
     type: String,
     required: true
   },
+  correct: {
+    type: Number,
+    default: 0
+  },
+  incorrect: {
+    type: Number,
+    default: 0
+  },
   questions: {
     type: Array,
     ref: 'Question'

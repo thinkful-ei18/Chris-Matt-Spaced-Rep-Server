@@ -4,6 +4,8 @@
     "username": "cyang",
     "password": "password123",
     "email": "test@test.com",
+    "correct": 0,
+    "incorrect": 0,
     "questions": [
       {
         "spanish": "gato",
@@ -60,6 +62,8 @@
     "username": "bbob",
     "password": "password123",
     "email": "tester@test.com",
+    "correct": 0,
+    "incorrect": 0,
     "questions": [
       {
         "spanish": "gato",
