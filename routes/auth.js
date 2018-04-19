@@ -21,7 +21,6 @@ function createAuthToken(user) {
 
 router.post('/auth/login', bodyParser, localAuth, (req, res) => {
   const authToken = createAuthToken(req.user);
-  console.log(authToken);
   return res.json({authToken});
 });
 

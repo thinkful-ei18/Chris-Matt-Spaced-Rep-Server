@@ -31,7 +31,6 @@ const UserSchema = new mongoose.Schema({
   },
   questions: {
     type: Array,
-    ref: 'Question'
   }
 });
 

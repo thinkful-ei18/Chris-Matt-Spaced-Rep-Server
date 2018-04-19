@@ -22,6 +22,7 @@ router.get('/users', bodyParser, (req, res, next) => {
 router.get('/users/:id', bodyParser, (req, res, next) => {
   const {id} = req.params;
   User.findById({_id: id})
+    .select('questions correct incorrect')
     .then(results => {
       res.json(results);
     })
@@ -163,7 +164,7 @@ router.post('/users', bodyParser, (req, res, next) => {
       'english': 'bird',
       'id': '5ad61ceb1aad04bea1adb4ba',
       'mValue': 1,
-      'nextQuestion': null,
+      'nextQuestion': 'nothing',
       'head': false
     }
   ];
@@ -225,7 +226,7 @@ router.put('/users/:id', bodyParser, (req, res, next) => {
       if (english === currNode.english) {
         currNode.mValue *= 2;
         if (currNode.mValue > questions.length) {
-          currNode.mValue = questions.length;
+          currNode.mValue = questions.length - 1;
         }
         for (let i = 0; i < currNode.mValue; i++) {
           nextNode = nextNode.nextQuestion;
