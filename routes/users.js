@@ -208,6 +208,7 @@ router.put('/users/:id', bodyParser, (req, res, next) => {
       let questions = results.questions;
       let currNode;
       let nextQuestionID;
+      console.log(currNode.nextQuestion);
       for (let i = 0; i < questions.length; i++) {
         if (questions[i].head) {
           currNode = questions[i];
