@@ -1,14 +1,6 @@
 'use strict';
 
-<<<<<<< HEAD
 const {app} = require('../index');
-=======
-require('dotenv').config();
-const User = require('../models/user');
-// const JWT_SECRET  = require('../config').JWT_SECRET;
-const TEST_DATABASE_URL = require('../config').TEST_DATABASE_URL;
-
->>>>>>> 63a9631d80a56c916b37df8774146f0ed1025029
 const chai = require('chai');
 const chaiHttp = require('chai-http');
 const expect = chai.expect;
