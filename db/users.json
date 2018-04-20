@@ -16,45 +16,77 @@
         "head": true
       },
       {
-        "spanish": "perro",
-        "english": "dog",
-        "id": "5ad61ceb1aad04bea1adb4b6",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
-        "head": false
+          "spanish": "perro",
+          "english": "dog",
+          "id": "5ad61ceb1aad04bea1adb4b6",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
+          "head": false
       },
       {
-        "spanish": "tortuga",
-        "english": "turtle",
-        "id": "5ad61ceb1aad04bea1adb4b7",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
-        "head": false
+          "spanish": "tortuga",
+          "english": "turtle",
+          "id": "5ad61ceb1aad04bea1adb4b7",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
+          "head": false
       },
       {
-        "spanish": "raton",
-        "english": "mouse",
-        "id": "5ad61ceb1aad04bea1adb4b8",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
-        "head": false
+          "spanish": "raton",
+          "english": "mouse",
+          "id": "5ad61ceb1aad04bea1adb4b8",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
+          "head": false
       },
       {
-        "spanish": "cerdo",
-        "english": "pig",
-        "id": "5ad61ceb1aad04bea1adb4b9",
-        "mValue": 1,
-        "nextQuestion": null,
-        "head": false
+          "spanish": "cerdo",
+          "english": "pig",
+          "id": "5ad61ceb1aad04bea1adb4b9",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4ba",
+          "head": false
       },
       {
-        "spanish": "pajaro",
-        "english": "bird",
-        "id": "5ad61ceb1aad04bea1adb4ba",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
-        "head": false
-      }
+          "spanish": "pajaro",
+          "english": "bird",
+          "id": "5ad61ceb1aad04bea1adb4ba",
+          "mValue": 1,
+          "nextQuestion": "5ada23312e15ed28a4de1c71",
+          "head": false
+        },
+        {
+            "spanish": "conejo",
+            "english": "rabbit",
+            "id": "5ada23312e15ed28a4de1c71",
+            "mValue": 1,
+            "nextQuestion": "5ada23312e15ed28a4de1c72",
+            "head": false
+        },
+        {
+            "spanish": "mono",
+            "english": "monkey",
+            "id": "5ada23312e15ed28a4de1c72",
+            "mValue": 1,
+            "nextQuestion": "5ada23312e15ed28a4de1c73",
+            "head": false
+        },
+        {
+            "spanish": "serpiente",
+            "english": "snake",
+            "id": "5ada23312e15ed28a4de1c73",
+            "mValue": 1,
+            "nextQuestion": "5ada23312e15ed28a4de1c74",
+            "head": false
+        },
+        {
+            "spanish": "toro",
+            "english": "bull",
+            "id": "5ada23312e15ed28a4de1c74",
+            "mValue": 1,
+            "nextQuestion": "nothing",
+            "head": false
+        }
     ]
   },
   {
@@ -74,45 +106,77 @@
         "head": true
       },
       {
-        "spanish": "perro",
-        "english": "dog",
-        "id": "5ad61ceb1aad04bea1adb4b6",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
-        "head": false
+          "spanish": "perro",
+          "english": "dog",
+          "id": "5ad61ceb1aad04bea1adb4b6",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4b7",
+          "head": false
       },
       {
-        "spanish": "tortuga",
-        "english": "turtle",
-        "id": "5ad61ceb1aad04bea1adb4b7",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
-        "head": false
+          "spanish": "tortuga",
+          "english": "turtle",
+          "id": "5ad61ceb1aad04bea1adb4b7",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4b8",
+          "head": false
       },
       {
-        "spanish": "raton",
-        "english": "mouse",
-        "id": "5ad61ceb1aad04bea1adb4b8",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
-        "head": false
+          "spanish": "raton",
+          "english": "mouse",
+          "id": "5ad61ceb1aad04bea1adb4b8",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4b9",
+          "head": false
       },
       {
-        "spanish": "cerdo",
-        "english": "pig",
-        "id": "5ad61ceb1aad04bea1adb4b9",
-        "mValue": 1,
-        "nextQuestion": null,
-        "head": false
+          "spanish": "cerdo",
+          "english": "pig",
+          "id": "5ad61ceb1aad04bea1adb4b9",
+          "mValue": 1,
+          "nextQuestion": "5ad61ceb1aad04bea1adb4ba",
+          "head": false
       },
       {
-        "spanish": "pajaro",
-        "english": "bird",
-        "id": "5ad61ceb1aad04bea1adb4ba",
-        "mValue": 1,
-        "nextQuestion": "5ad61ceb1aad04bea1adb4b6",
-        "head": false
-      }
+          "spanish": "pajaro",
+          "english": "bird",
+          "id": "5ad61ceb1aad04bea1adb4ba",
+          "mValue": 1,
+          "nextQuestion": "5ada23312e15ed28a4de1c71",
+          "head": false
+        },
+        {
+            "spanish": "conejo",
+            "english": "rabbit",
+            "id": "5ada23312e15ed28a4de1c71",
+            "mValue": 1,
+            "nextQuestion": "5ada23312e15ed28a4de1c72",
+            "head": false
+        },
+        {
+            "spanish": "mono",
+            "english": "monkey",
+            "id": "5ada23312e15ed28a4de1c72",
+            "mValue": 1,
+            "nextQuestion": "5ada23312e15ed28a4de1c73",
+            "head": false
+        },
+        {
+            "spanish": "serpiente",
+            "english": "snake",
+            "id": "5ada23312e15ed28a4de1c73",
+            "mValue": 1,
+            "nextQuestion": "5ada23312e15ed28a4de1c74",
+            "head": false
+        },
+        {
+            "spanish": "toro",
+            "english": "bull",
+            "id": "5ada23312e15ed28a4de1c74",
+            "mValue": 1,
+            "nextQuestion": "nothing",
+            "head": false
+        }
     ]
   }
 ]
