@@ -5,7 +5,7 @@ const router = express.Router();
 const bodyParser = require('body-parser').json();
 
 const User = require('../models/user');
-const Question = require('../models/question');
+const Question = require('../db/questions');
 
 /* ========== GET/READ ALL ITEM ========== */
 router.get('/users', bodyParser, (req, res, next) => {
@@ -118,57 +118,6 @@ router.post('/users', bodyParser, (req, res, next) => {
     });
   }
 
-  let questions = [
-    {
-      'spanish': 'gato',
-      'english': 'cat',
-      'id': '5ad61ceb1aad04bea1adb4b5',
-      'mValue': 1,
-      'nextQuestion': '5ad61ceb1aad04bea1adb4b6',
-      'head': true
-    },
-    {
-      'spanish': 'perro',
-      'english': 'dog',
-      'id': '5ad61ceb1aad04bea1adb4b6',
-      'mValue': 1,
-      'nextQuestion': '5ad61ceb1aad04bea1adb4b7',
-      'head': false
-    },
-    {
-      'spanish': 'tortuga',
-      'english': 'turtle',
-      'id': '5ad61ceb1aad04bea1adb4b7',
-      'mValue': 1,
-      'nextQuestion': '5ad61ceb1aad04bea1adb4b8',
-      'head': false
-    },
-    {
-      'spanish': 'raton',
-      'english': 'mouse',
-      'id': '5ad61ceb1aad04bea1adb4b8',
-      'mValue': 1,
-      'nextQuestion': '5ad61ceb1aad04bea1adb4b9',
-      'head': false
-    },
-    {
-      'spanish': 'cerdo',
-      'english': 'pig',
-      'id': '5ad61ceb1aad04bea1adb4b9',
-      'mValue': 1,
-      'nextQuestion': '5ad61ceb1aad04bea1adb4ba',
-      'head': false
-    },
-    {
-      'spanish': 'pajaro',
-      'english': 'bird',
-      'id': '5ad61ceb1aad04bea1adb4ba',
-      'mValue': 1,
-      'nextQuestion': 'nothing',
-      'head': false
-    }
-  ];
-
   return User.hashPassword(password)
     .then(digest => {
       const newUser = {
@@ -178,7 +127,7 @@ router.post('/users', bodyParser, (req, res, next) => {
         email,
         correct,
         incorrect,
-        questions,
+        questions: Question,
       };
       return User.create(newUser);
     })
