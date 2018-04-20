@@ -1,9 +1,9 @@
 'use strict';
 
 require('dotenv').config();
-// global.TEST_DATABASE_URL = 'mongodb://localhost/jwt-auth-demo-test';
-const { User } = require('../models/user');
-const { JWT_SECRET, TEST_DATABASE_URL } = require('../config');
+const User = require('../models/user');
+// const JWT_SECRET  = require('../config').JWT_SECRET;
+const TEST_DATABASE_URL = require('../config').TEST_DATABASE_URL;
 
 const chai = require('chai');
 const chaiHttp = require('chai-http');

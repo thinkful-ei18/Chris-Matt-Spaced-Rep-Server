@@ -2,8 +2,7 @@
 
 require('dotenv').config();
 
-const {JWT_SECRET} = require('../config');
-// console.log(JWT_SECRET);
+const JWT_SECRET = require('../config').JWT_SECRET;
 
 const {Strategy: JwtStrategy, ExtractJwt} = require('passport-jwt');
 
