@@ -1,3 +1,67 @@
+# Space Repetition Project
+
+## Title: Spanish Tutor
+## Link to deployed version: https://admiring-liskov-604b28.netlify.com/
+### Summary
+Spanish Tutor is a quiz app designed to adapt to your learning needs. This means that questions you get right more often will be asked later. The questions you tend to get wrong will be asked again sooner.
+
+### How Questions Are Stored
+The questions are stored in the database as a singly linked list. Each question is initialized for a new user with an "m" value of 1. If a question is answered correctly, "m" is multiplied by 2 and is moved 2*m down the singly linked-list. If a question is answered incorrectly, "m" reset to 1 and is added after next question.
+
+# Landing Page
+![Landing Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/instructions-full.png)
+
+General instructions are available for user to login or register.  A brief paragraph on what space repetition is in the context of weighted questions. The navigation bar on the top right includes links for login and registration pages.
+
+# Registration Page
+![Registration Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/Registration-mobile.png)
+
+For a first time user, the registration page is available.  The image above shows the mobile first design characteristics of the app.  The required fields on the form for registration include Username, Password, and Confirm password.
+
+# Login Page
+![Login Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/Login-mobile.png)
+
+For returning users, a login page is available requiring username and password.
+
+# Question Flow
+![Question Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/question-mobile.png)
+
+![Correct Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/correct-mobile.png)
+
+![Incorrect Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/incorrect-mobile.png)
+
+Upon successful login, user is brought to the first question.  If correct, feedback is given congratulating the user.  If incorrect, feedback is given giving the user the correct answer.
+
+# User Information
+![User Information Page](https://raw.githubusercontent.com/thinkful-ei18/Chris-Matt-Spaced-Rep-Server/master/img/userinfo-mobile.png)
+
+While the user is working on the question flow, "User Info" can be accessed through the navigation bar.  The user is able to review username, name, email, and the amount of correct answers.
+
+# For Developers
+Run "npm install" in both hiking-client and nestle-server directories.
+
+
+This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+Below you will find some information on how to perform common tasks.<br>
+You can find the most recent version of this guide [here](https://github.com/facebookincubator/create-react-app/blob/master/packages/react-scripts/template/README.md).
+
+### Technology Stack
+* Front-End
+  * React
+  * Redux
+  * Flexbox
+* Back-End
+  * Node
+  * Express
+  * Mongoose
+* Data Storage
+  * MongoDB
+  * mLab
+* Deployment
+  * Heroku
+  * Netlify
+
 # Thinkful Backend Template
 
 A template for developing and deploying Node.js apps.
