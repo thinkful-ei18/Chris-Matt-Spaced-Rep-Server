@@ -1,7 +1,7 @@
 # Space Repetition Project
 
 ## Title: Spanish Tutor
-## Link to deployed version: https://admiring-liskov-604b28.netlify.com/
+## Link to deployed version: https://spanishtutor.netlify.com/
 ### Summary
 Spanish Tutor is a quiz app designed to adapt to your learning needs. This means that questions you get right more often will be asked later. The questions you tend to get wrong will be asked again sooner.
 
