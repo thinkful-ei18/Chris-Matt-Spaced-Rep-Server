@@ -2,6 +2,10 @@
 
 ## Title: Spanish Tutor
 ## Link to deployed version: https://spanishtutor.netlify.com/
+
+## Demo Account
+To demo account, please input Username "demo" and Password "demoaccount" into the login panel.
+
 ### Summary
 Spanish Tutor is a quiz app designed to adapt to your learning needs. This means that questions you get right more often will be asked later. The questions you tend to get wrong will be asked again sooner.
 
